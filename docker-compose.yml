@@ -1,0 +1,14 @@
+web:
+  build: ./backend
+  environment:
+    - PYTHONUNBUFFERED=0
+  ports:
+    - "5000:5000"
+  volumes:
+    - ./backend:/code
+  links:
+    - db
+db:
+  image: mongo:3.0.2
+  ports:
+    - "27017:27017"
