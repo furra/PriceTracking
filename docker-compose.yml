@@ -1,11 +1,11 @@
 web:
-  build: ./backend
+  build: ./api
   environment:
     - PYTHONUNBUFFERED=0
   ports:
     - "5000:5000"
   volumes:
-    - ./backend:/code
+    - ./api:/code
   links:
     - db
 db:
