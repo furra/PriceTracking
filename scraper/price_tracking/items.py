@@ -10,9 +10,11 @@ from scrapy.item import Item, Field
 
 class TvItem(Item):
     # define the fields for your item here like:
-    internal_code = Field()
     store_code = Field()
-    code = Field()
+    internal_code = Field()
+    price = Field()
+    internet_price = Field()
+    stock = Field()
     attributes = Field()
-    available = Field()
+    url = Field()
     pass
