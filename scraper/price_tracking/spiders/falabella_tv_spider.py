@@ -18,7 +18,7 @@ class FalabellaTvSpider(scrapy.Spider):
 
     for link in tv_links:
       tv_link = base_url + link
-      print "Scrapng %s"%tv_link
+      print "Scraping %s"%tv_link
       yield scrapy.Request(tv_link, callback=self.parse_tv_info)
 
     print "Advancing to next page"
